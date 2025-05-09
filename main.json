@@ -1,0 +1,58 @@
+
+  {
+
+    "Figure (centering, htb, auto-hoge)": {
+      "prefix": "figure-auto",
+      "body": [
+        "\\begin{figure}[htb]",
+        "  \\centering",
+        "  \\includegraphics[width=90mm]{${1:hoge}}",
+        "  \\caption{${2:hoge}}",
+        "  \\label{fig:${2:hoge}}",
+        "\\end{figure}"
+      ],
+      "description": "centering, [htb]配置のfigure環境 (hoge一括入力)"
+    },
+
+    "equation":{
+      "prefix":"equation",
+      "body":[
+        "\\begin{align}",
+      	"${2:数式}",
+      	"\\label{eq:${1:ラベル}}",
+        "\\end{align}"
+
+      ],
+      "description": "数式1行の入力"
+
+    },
+
+    "箇条書き":{
+      "prefix": "箇条書き",
+      "body":[
+        "\\begin{itemize}",
+	      " \\item ${1}",
+
+        "\\end{itemize}"
+      ]
+    },
+
+    "表":{
+      "prefix": "表",
+      "body":[
+        "\\begin{table}[h]",
+        "\\centering",
+        "\\caption{${1:キャプション}}",
+        "\\label{fig:${1:ラベル}}",
+        "\\begin{tabular}{cc}\\hline",
+        "${2:タイトル行}\\\\",
+        "\\hline\\hline",
+        "${3:本文}\\\\",
+
+        "\\hline",
+        "\\end{tabular}",
+        "\\end{table}",
+      ]
+    }
+  
+  }
